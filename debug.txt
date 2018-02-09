@@ -6,5 +6,9 @@ GameInstance.java:73: warning: [unchecked] unchecked method invocation: method s
   where T is a type-variable:
     T extends Comparable<? super T> declared in method <T>sort(List<T>)
 1 warning
-Thread index: 15
 Thread index: 16
+Thread index: 16
+Thread:Server thread for player 0 properly interrupted
+Thread:Client thread properly interrupted
+Thread index: 18
+Thread index: 18

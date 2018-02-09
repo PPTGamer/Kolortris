@@ -279,7 +279,6 @@ public final class MenuState{
 			parentFrame.getGameServer().startAcceptingConnections();
 
 			parentFrame.createClient("localhost");
-			while(parentFrame.getGameClient().getClientID()==null){}
 
 			parentFrame.getGameClient().getMyField().setName(parentFrame.playerName);
 
@@ -404,8 +403,8 @@ public final class MenuState{
 					parentFrame.setState(new Lobby(parentFrame));
 				}else if(source.equals(buttonConnect)){
 					if(parentFrame.createClient(textFieldIPAddress.getText())){
-						parentFrame.setState(new GamePanel(parentFrame));
 						parentFrame.getGameClient().getMyField().setName(parentFrame.playerName);
+						parentFrame.setState(new GamePanel(parentFrame));
 					}else{
 						JOptionPane.showMessageDialog(this,"Unable to connect to " + textFieldIPAddress.getText());
 					}
@@ -437,14 +436,6 @@ public final class MenuState{
 			}else gameDisplay = null;
 			int clientID = parentFrame.getGameClient().getClientID();
 			(new HumanController()).bindToDisplay(gameDisplay, clientID);
-		}
-		private void addHumanController()
-		{
-
-		}
-		private void addAIController()
-		{
-
 		}
 		@Override
 		protected void handleEvent(ActionEvent e){}

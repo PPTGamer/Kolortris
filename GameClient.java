@@ -39,6 +39,7 @@ class GameClient extends NetworkingComponent{
 			mySocket = new Socket(IPAddress,PORT_NUMBER);
 			myClientThread = new ClientThread(this,mySocket);
 			myClientThread.start();
+			while(this.getClientID()==null){Thread.sleep(20);}
 			return true;
 		}catch(Exception e){
 			System.out.println("Failed to connect to " + IPAddress);
