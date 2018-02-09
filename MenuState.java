@@ -325,6 +325,7 @@ public final class MenuState{
 				JButton source = (JButton)e.getSource();
 				if(source.equals(buttonBack)){
 					parentFrame.getGameServer().stopAcceptingConnections();
+					parentFrame.destroyGameManagers();
 					parentFrame.setState(new Lobby(parentFrame));
 				}else if(source.equals(buttonStart)){
 					parentFrame.getGameServer().stopAcceptingConnections();

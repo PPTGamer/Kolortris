@@ -97,7 +97,7 @@ public class GameInstance{
 		while(playfields.get(playerID)==null){addPlayer();}
 		return playfields.get(playerID);
 	}
-	
+
 	private String getDataBlock(String data, String startToken, String endToken){
 		int startIndex = data.indexOf(startToken)+startToken.length()+1;
 		int endIndex = data.indexOf(endToken)-1;
@@ -141,5 +141,5 @@ public class GameInstance{
 			sb.append(",PlayfieldDataEnd");
 		}
 		return sb.toString();
-	}	
+	}
 }
