@@ -1,0 +1,10 @@
+GameInstance.java:73: warning: [unchecked] unchecked method invocation: method sort in class Collections is applied to given types
+		Collections.sort(records);
+		                ^
+  required: List<T>
+  found: ArrayList<GameInstance.Record>
+  where T is a type-variable:
+    T extends Comparable<? super T> declared in method <T>sort(List<T>)
+1 warning
+Thread index: 15
+Thread index: 16
