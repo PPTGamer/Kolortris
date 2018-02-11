@@ -466,7 +466,7 @@ public final class MenuState{
 			this.textAreaPlayerName.setEditable(false);
 			this.textAreaScores.setEditable(false);
 
-			ArrayList<GameInstance.Record> results = parentFrame.getGameClient().getGameInstance().getRecords();
+			ArrayList<GameInstance.Record> results = parentFrame.getGameClient().getRecords();
 			StringBuilder sb1 = new StringBuilder();
 			StringBuilder sb2 = new StringBuilder();
 			for(int i = 0; i<results.size(); i++){

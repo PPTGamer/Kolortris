@@ -68,6 +68,13 @@ class GameClient extends NetworkingComponent{
 		return myGameInstance.getPlayfield(myClientID);
 	}
 	/**
+	 *	Returns the <code>Records</code> associated with this <code>GameClient</code>.
+	 *	@return the <code>Records</code> associated with this <code>GameClient</code>
+	**/
+	public synchronized ArrayList<GameInstance.Record> getRecords(){
+		return myGameInstance.getRecords();
+	}
+	/**
 	 *	Returns the <code>GameInstance</code> associated with this <code>GameClient</code>.
 	 *	@return the <code>GameInstance</code> associated with this <code>GameClient</code>
 	**/
